@@ -17,8 +17,8 @@ const {messages} = loadMessages();
 
 const i18n = createI18n({
     legacy: false,
-    locale: "en",
-    fallbackLocale: "en",
+    locale: "fr",
+    fallbackLocale: "fr",
     messages: messages
 });
 

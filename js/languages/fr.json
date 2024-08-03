@@ -148,9 +148,9 @@
         "is_featured": "Est en vedette",
         "tax": "Taxe",
         "item_type": "Type d'article",
-        "veg": "Halal",
-        "non_veg": "Non végétarien",
-        "frontend_non_veg": "Non-Végétarien",
+        "veg": "Rien",
+        "non_veg": "حلال",
+        "frontend_non_veg": "حلال",
         "caution": "Prudence",
         "title": "Titre",
         "latitude": "Latitude",
@@ -556,6 +556,7 @@
         "json": "Json"
     },
     "button": {
+		"view_cart": "Voir le panier",
         "add": "Ajouter",
         "save": "Enregistrer",
         "edit": "Modifier",

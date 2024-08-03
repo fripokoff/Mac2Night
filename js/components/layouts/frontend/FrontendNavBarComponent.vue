@@ -6,7 +6,23 @@
                 <router-link :to="{ name: 'frontend.home' }">
                     <img class="w-32" :src="setting.theme_logo" alt="logo">
                 </router-link>
-
+				<button style="background-color: rgb(21 155 179);" class="lg:hidden mobcart capitalize text-xs font-medium rounded-md flex-shrink-0 p-2.5 text-white bg-primary">{{$t('button.view_cart')}}</button>
+				<div v-if="setting.site_language_switch === enums.activityEnum.ENABLE"
+                    class="lg:hidden lg:block relative dropdown-group sm:w-fit">
+                    <button
+                        class="_custom-flag-button flex items-center justify-center gap-1.5 w-fit rounded-3xl capitalize text-sm font-medium h-8 px-3 border transition text-heading bg-white border-gray-200 dropdown-btn">
+                        <img :src="language.image" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="whitespace-nowrap">{{ language.name }}</span>
+                    </button>
+                    <ul v-if="languages.length > 0"
+                        class="p-2 min-w-[180px] rounded-lg shadow-xl absolute top-14 ltr:right-0 rtl:left-0 z-10 border border-gray-200 bg-white hidden dropdown-list">
+                        <li @click="changeLanguage(language.id, language.code)" v-for="language in languages"
+                            class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img :src="language.image" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">{{ language.name }}</span>
+                        </li>
+                    </ul>
+                </div>
                 <div class="relative dropdown-group" v-if="branches.length > 1">
                     <button class="flex items-center text-left gap-2 dropdown-btn">
                         <h3 class="capitalize text-xs font-medium text-heading">

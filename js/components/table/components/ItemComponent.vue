@@ -10,7 +10,7 @@
                         @click.prevent="infoModalShow(item.name, item.caution)">
                         <i class="lab lab-information font-fill-paragraph transition lab-font-size-16"></i>
                     </button>
-<img src="/svg/halal-icon.svg" alt="Halal Icon" class="lab-font-size-16">
+				<img v-if="item.item_type == 10" src="/themes/default/images/bg/halal.svg" alt="Halal Icon" class="lab-font-size-16">
                 </div>
                 <p class="product-card-list-describe char-limit">
                     {{ textShortener(item.description, 65) }}
@@ -43,7 +43,7 @@
                         @click.prevent="infoModalShow(item.name, item.caution)">
                         <i class="lab lab-information font-fill-paragraph transition lab-font-size-16"></i>
                     </button>
-<img src="/svg/halal-icon.svg" alt="Halal Icon" class="lab-font-size-16">
+					<img v-if="item.item_type == 10" src="/themes/default/images/bg/halal.svg" alt="Halal Icon" class="lab-font-size-16">
                 </div>
                 <p class="product-card-grid-describe char-limit">{{ textShortener(item.description, 75) }}</p>
                 <div class="product-card-grid-footer-group">
